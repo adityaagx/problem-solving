@@ -1,5 +1,7 @@
 # Programmer Brain Training Roadmap (JavaScript)
 
+State → Action → Condition → Function → Loop → State gets updated.
+
 > Goal: Train my brain to think like a programmer so I can solve problems confidently.
 
 ---
