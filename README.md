@@ -6,79 +6,152 @@ State → Action → Condition → Function → Loop → State gets updated.
 
 ---
 
-## Chapter 1: What Programming Really Is
-- Programming = giving tiny, literal instructions
-- Difference between syntax vs problem-solving
-- Why beginners feel stuck (normal phase)
+### 1️⃣ Core Mental Model Learned
+
+* State should **never be mutated**
+* State should **always be replaced**
+* Systems detect change using **reference**, not internal mutation
+* Mutation causes **silent bugs**, replacement keeps system in sync
 
 ---
 
-## Chapter 2: Literal Thinking
-- Think like a robot, not a human
-- Break actions into the smallest steps
-- Practice converting daily tasks into instructions
+### 2️⃣ Single-Value State (Completed Earlier)
+
+* State holding one value (number, string, boolean)
+* Updating means:
+
+  * Take old value
+  * Create new value
+  * Replace old state
+* Derived state should not be stored separately
 
 ---
 
-## Chapter 3: State (Core Concept)
-- What variables really represent
-- Understanding memory and changing values
-- Why counters depend on state
+### 3️⃣ List (Array) State — COMPLETED
+
+**Key concepts learned:**
+
+* A list is a single state holding multiple related values
+* Lists must be treated as **one unit**
+* Adding/removing items must create a **new list**
+* `push()` mutates → ❌ not safe for state
+* `concat()` / spread → creates new list → ✅ safe
+* List length should be **derived**, not stored
+* Replacing lists is safer than modifying them
+* Lists are harder than single-value state because they involve multiple values
+
+**Practice Tasks Completed:**
+
+* What a list is (logic-based)
+* Real-world list examples
+* Why lists are one state
+* Adding/removing logic
+* Derived state with lists
+* Why mutation causes contradictions
 
 ---
 
-## Chapter 4: Flow & Execution
-- Code runs top to bottom
-- Events (clicks) vs normal execution
-- Predict what happens before running code
+### 4️⃣ Object State — COMPLETED
+
+**Key concepts learned:**
+
+* An object is one state grouping multiple related properties
+* Properties should be grouped to stay synchronized
+* Updating object state requires:
+
+  * Copy object
+  * Change one property
+  * Replace entire object
+    
+* Direct mutation causes silent bugs
+* Derived state comes from object properties (e.g., `isAdult` from `age`)
+* Replacement is safer than mutation
+
+**Practice Tasks Completed:**
+
+* What an object is
+* Real-world object examples
+* Why grouping properties matters
+* Object update logic
+* Mutation bugs
+* Lists of values vs lists of objects
+* Objects inside lists (real systems)
+* Why objects complete state foundation
 
 ---
 
-## Chapter 5: Problem Breakdown
-- Split problems into:
-  - Input
-  - State
-  - Action
-- Learn how to start any problem
+### 5️⃣ VERY IMPORTANT CLARITY ACHIEVED
+
+* `push()` vs `concat()` confusion resolved
+* Mutation is allowed for **local variables**
+* Mutation is **not allowed for state**
+* Replacement = predictable systems
+* Mutation = hidden errors
 
 ---
 
-## Chapter 6: Counter Patterns
-- Counters exist everywhere (likes, score, cart)
-- One pattern → many use cases
-- Spot counters in real apps
+## Chapter 16: Lists of Objects (MOST IMPORTANT)
+
+* Updating one object inside a list
+* Adding objects to list immutably
+* Removing objects from list immutably
+* Updating nested properties safely
+* Why this is where most beginners fail
 
 ---
 
-## Chapter 7: English → Pseudocode → JS
-- Write logic in plain English first
-- Convert English to pseudocode
-- Translate pseudocode to JavaScript
+## Chapter 17: Derived State (Advanced)
+
+* Derived state vs stored state
+* When NOT to store derived values
+* Computing values from lists & objects
+* Preventing contradictory state
 
 ---
 
-## Chapter 8: Debugging Mindset
-- Bugs = feedback
-- Use `console.log` to trace thinking
-- Step-by-step value tracking
+## Chapter 18: Nested State
+
+* Objects inside objects
+* Lists inside objects
+* How deep nesting causes bugs
+* How to safely update nested state
 
 ---
 
-## Chapter 9: Build the Counter (Deep)
-- Create counter from scratch
-- Increment, decrement, reset
-- Understand every line (no copying)
+## Chapter 19: State Normalization (Conceptual)
+
+* Why deeply nested state is dangerous
+* Flat vs nested data
+* Real-world system design logic
 
 ---
 
-## Chapter 10: Problem-Solving Framework
-- Reusable thinking system
-- Stay calm with new problems
-- Practice the right way
+## Chapter 20: State Update Patterns
+
+* Add
+* Remove
+* Update
+* Toggle
+* Replace
+  (All patterns applied to objects & lists)
 
 ---
 
-### Final Goal
-✅ Stop freezing on problems  
-✅ Think step-by-step  
-✅ Solve basic JS problems confidently
+## Chapter 21: React State Mapping (When Ready)
+
+* Applying all logic to `useState`
+* Why React behaves the way it does
+* How React detects changes
+* Writing bug-free React state updates
+
+---
+
+## Chapter 22: Mental Models of State (Expert Level)
+
+* State as truth
+* State as history
+* State as source of UI
+* Why immutability scales systems
+
+---
+
