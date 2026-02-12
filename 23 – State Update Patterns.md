@@ -1,4 +1,4 @@
-# 🧠 Chapter 22 – State Update Patterns
+# 🧠 Chapter 23 – State Update Patterns
 
 (Add, Remove, Update, Toggle, Replace — for Objects & Lists)
 
